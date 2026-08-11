@@ -12,16 +12,16 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise", "catppuccin_latte", "catppuccin_mocha"
+minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "default", "dirt", "neon", "mint", "plum", "sunrise", "catppuccin_latte", "catppuccin_mocha"
 
 # Site Settings
 locale                   : "en-US"
 direction                : # "ltr" (default), "rtl" # set the direction of the page
-title                    : "Site Title"
+title                    : "Encounters Dev Site"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
-description              : "An amazing website."
+name                     : "Axe Studios"
+description              : "Site for tracking Encounters game prototype progress"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -43,7 +43,7 @@ comments:
     # https://developers.facebook.com/docs/plugins/comments
     appid                :
     num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
+    colorscheme          : "dark" # "light" (default), "dark"
   utterances:
     theme                : # "github-light" (default), "github-dark"
     issue_term           : # "pathname" (default)
@@ -114,10 +114,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Joe"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
+  bio              : "I'm a guy just trying to follow God's will."
+  location         : "NC"
   email            :
   # fediverse      : "@you@instance.social"  # used for fediverse:creator meta tag
   links:
@@ -270,7 +270,6 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
-  - jekyll-remote-theme
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -310,7 +309,6 @@ tag_archive:
 #     category: /categories/:name/
 #     tag: /tags/:name/
 
-
 # HTML Compression
 # - https://jch.penibelst.de/
 compress_html:
@@ -318,6 +316,11 @@ compress_html:
   ignore:
     envs: development
 
+# Collections
+collections:
+  blogposts:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -327,9 +330,11 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
-      read_time: true
-      comments: # true
-      share: true
-      related: true
+  # _blogposts
+  - scope:
+      path: ""
+      type: blogposts
+    values:
+      layout: single
+
 
