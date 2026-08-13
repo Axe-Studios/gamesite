@@ -33,6 +33,27 @@ body {
   flex: 1 0 auto;
 }
 
+.page-wide {
+
+  .page__inner-wrap {
+    float: inline-start;
+    margin-top: 1em;
+    margin-inline: 0;
+    width: 100%;
+    clear: both;
+
+    .page__content,
+    .page__meta,
+    .page__share {
+      position: relative;
+      float: inline-start;
+      margin-inline: 0;
+      width: 100%;
+      clear: both;
+    }
+  }
+}
+
 .page {
   @include breakpoint($large) {
     float: inline-end;
@@ -172,7 +193,7 @@ body {
   }
 
   /* vertical alignment for first content */
-  :first-child, 
+  :first-child,
   aside + :nth-child(2) {
     margin-top: 0em;
   }
