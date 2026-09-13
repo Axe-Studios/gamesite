@@ -16,6 +16,8 @@ source "https://rubygems.org"
 gem "jekyll"
 gem "jekyll-remote-theme"
 gem "minimal-mistakes-jekyll"
+gem 'wdm', '>= 0.1.0'
+gem 'faraday-retry'
 
 # The following plugins are automatically loaded by the theme-gem:
 #   gem "jekyll-paginate"
